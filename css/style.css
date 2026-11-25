@@ -15,6 +15,11 @@ body {
     line-height: 1.6;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .container {
     width: 90%;
     max-width: 1150px;
@@ -28,7 +33,7 @@ body {
 
 .header {
     background-color: #17233d;
-    padding: 18px 0;
+    padding: 14px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -41,9 +46,23 @@ body {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
     color: white;
     font-size: 25px;
     font-weight: bold;
+    text-decoration: none;
+}
+
+.logo-img {
+    display: block;
+    height: 48px;
+    width: auto;
+    transition: 0.3s;
+}
+
+.logo-img:hover {
+    transform: scale(1.08);
 }
 
 .nav-links {
@@ -70,7 +89,7 @@ body {
 
 .hero {
     background-color: white;
-    padding: 90px 0;
+    padding: 70px 0 90px 0;
     text-align: center;
 }
 
@@ -101,6 +120,31 @@ body {
     font-weight: bold;
     letter-spacing: 2px;
     margin-bottom: 15px;
+}
+
+
+/* =====================================
+   PROFILE PICTURE
+===================================== */
+
+.hero .profile-pic {
+    display: block;
+    width: 150px;
+    height: 190px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 18px;
+    border: 5px solid white;
+    box-shadow: 0 0 0 4px #f06449,
+                0 15px 35px rgba(23, 35, 61, 0.25);
+    margin: 0 auto 35px auto;
+    transition: 0.4s;
+}
+
+.hero .profile-pic:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 0 0 4px #17233d,
+                0 20px 40px rgba(23, 35, 61, 0.35);
 }
 
 
@@ -330,10 +374,18 @@ tbody tr:hover {
 }
 
 .video-card iframe {
+    display: block;
     width: 100%;
+    max-width: 100%;
     aspect-ratio: 16 / 9;
     border: none;
     border-radius: 8px;
+}
+
+.video-card p {
+    color: #667085;
+    margin-top: 12px;
+    font-size: 14px;
 }
 
 
@@ -367,6 +419,7 @@ tbody tr:hover {
     border-radius: 10px;
     border: 1px solid #dddddd;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    overflow-wrap: break-word;
 }
 
 .contact-card h3 {
@@ -526,6 +579,14 @@ tbody tr:hover {
         padding: 20px;
     }
 
+    /* Prevent tables from causing page overflow on tablet & mobile */
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
 }
 
 
@@ -543,6 +604,10 @@ tbody tr:hover {
         font-size: 22px;
     }
 
+    .logo-img {
+        height: 38px;
+    }
+
     .nav-links {
         gap: 10px;
     }
@@ -552,7 +617,12 @@ tbody tr:hover {
     }
 
     .hero {
-        padding: 50px 0;
+        padding: 40px 0;
+    }
+
+    .hero .profile-pic {
+        width: 120px;
+        height: 152px;
     }
 
     .hero h1 {
