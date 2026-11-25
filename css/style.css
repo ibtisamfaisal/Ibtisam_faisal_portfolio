@@ -1,0 +1,624 @@
+/* =====================================
+   GENERAL STYLING
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fb;
+    color: #17233d;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+
+/* =====================================
+   HEADER AND NAVIGATION
+===================================== */
+
+.header {
+    background-color: #17233d;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f06449;
+}
+
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero {
+    background-color: white;
+    padding: 90px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #f06449;
+}
+
+.hero h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.hero .description {
+    max-width: 650px;
+    margin: auto;
+    color: #667085;
+    font-size: 17px;
+}
+
+.intro {
+    color: #f06449;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+
+/* =====================================
+   BUTTON
+===================================== */
+
+.btn {
+    display: inline-block;
+    background-color: #f06449;
+    color: white;
+    padding: 12px 28px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #d94e35;
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   ABOUT SECTION
+===================================== */
+
+.about {
+    padding: 65px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.about-description {
+    color: #667085;
+    margin-bottom: 35px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.about-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #e5e9f0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.about-card h3 {
+    color: #f06449;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    color: #667085;
+}
+
+.about-card ol,
+.about-card ul {
+    text-align: left;
+    padding-left: 25px;
+    line-height: 2;
+}
+
+
+/* =====================================
+   FAVOURITE SPORT SECTION
+===================================== */
+
+.sport {
+    background-color: #e9edf5;
+    padding: 65px 0;
+    text-align: center;
+}
+
+.sport h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.sport article {
+    background-color: white;
+    max-width: 750px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.sport h3 {
+    color: #f06449;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.sport p {
+    color: #667085;
+}
+
+
+/* Lists inside cards */
+.sport article ul,
+.sport article ol {
+    text-align: left;
+    padding-left: 25px;
+    line-height: 2;
+    color: #667085;
+}
+
+
+/* =====================================
+   TABLE STYLING
+===================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background-color: white;
+}
+
+th {
+    background-color: #17233d;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+td {
+    padding: 14px;
+    border: 1px solid #dddddd;
+    color: #17233d;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f4f8;
+}
+
+tbody tr:hover {
+    background-color: #ffe8e2;
+    transition: 0.3s;
+}
+
+
+/* =====================================
+   FAVOURITE MEDIA PAGE
+===================================== */
+
+.media-section {
+    padding: 60px 0;
+}
+
+.media-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.social-column h2,
+.video-column h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.post {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.post h3 {
+    color: #f06449;
+    margin-bottom: 5px;
+}
+
+.post-user {
+    color: #777777;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.post p {
+    color: #667085;
+}
+
+.video-card {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.video-card h3 {
+    margin-bottom: 12px;
+    color: #f06449;
+}
+
+.video-card iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 8px;
+}
+
+
+/* =====================================
+   CONTACT PAGE
+===================================== */
+
+.contact-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact-section h2,
+.friends-section h2,
+.contact-form-section h2,
+.map-section h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.contact-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.contact-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.contact-card h3 {
+    color: #f06449;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: #667085;
+}
+
+.contact-card a {
+    color: #17233d;
+    text-decoration: none;
+}
+
+.friends-section {
+    background-color: #e9edf5;
+    padding: 60px 0;
+}
+
+
+/* =====================================
+   CONTACT FORM
+===================================== */
+
+.contact-form-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact-form-section form {
+    max-width: 650px;
+    margin: auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #f06449;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* =====================================
+   GOOGLE MAP
+===================================== */
+
+.map-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #e9edf5;
+}
+
+.map-section p {
+    margin-bottom: 20px;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+    border-radius: 10px;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer {
+    background-color: #17233d;
+    color: white;
+    text-align: center;
+    padding: 22px 0;
+}
+
+
+/* =====================================
+   SMALL TEXT
+===================================== */
+
+.small-note {
+    color: #667085;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media screen and (max-width: 768px) {
+
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .media-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-details {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-section form {
+        padding: 20px;
+    }
+
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVENESS - 375 PX
+===================================== */
+
+@media screen and (max-width: 375px) {
+
+    .container {
+        width: 94%;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 50px 0;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero .description {
+        font-size: 14px;
+    }
+
+    .about h2,
+    .sport h2 {
+        font-size: 27px;
+    }
+
+    .about-card,
+    .sport article {
+        padding: 20px;
+    }
+
+    .social-column h2,
+    .video-column h2 {
+        font-size: 22px;
+    }
+
+    .post,
+    .video-card {
+        padding: 12px;
+    }
+
+    .contact-section h2,
+    .friends-section h2,
+    .contact-form-section h2,
+    .map-section h2 {
+        font-size: 24px;
+    }
+
+    .contact-card {
+        padding: 18px;
+    }
+
+    .contact-form-section form {
+        padding: 15px;
+    }
+
+    /* Prevent tables from causing page overflow */
+
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .map-section iframe {
+        height: 280px;
+    }
+
+}
